@@ -24,7 +24,7 @@
                 <a href="https://www.linkedin.com/in/othmane-bouadel-2428a017b/" target="_blank" class="social-btn" title="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="mailto:bbouadel97@gmail.com" class="social-btn" title="Email">
+                <a href="javascript:void(0);" onclick="copyEmailHeader()" class="social-btn" title="Copier l'email">
                     <i class="fas fa-envelope"></i>
                 </a>
                 <a href="cv.pdf" download="CV_Othmane_Bouadel.pdf" class="social-btn" title="Télécharger mon CV">
@@ -174,6 +174,13 @@ Curieux et motivé, je développe constamment de nouvelles compétences pour pro
                 setTimeout(() => {
                     message.style.opacity = '0';
                 }, 3000);
+            });
+        }
+
+        function copyEmailHeader() {
+            const email = 'bbouadel97@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                alert('✓ Email copié : ' + email);
             });
         }
     </script>
