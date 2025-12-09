@@ -153,15 +153,30 @@ Curieux et motivé, je développe constamment de nouvelles compétences pour pro
         <h2><i class="fas fa-paper-plane"></i> Contact</h2>
         <div class="contact-content">
             <p class="contact-text">Vous avez un projet ou une opportunité ? N'hésitez pas à me contacter !</p>
-            <a href="mailto:bbouadel97@gmail.com" class="btn-contact">
+            <button onclick="copyEmail()" class="btn-contact">
                 <i class="fas fa-envelope"></i> bbouadel97@gmail.com
-            </a>
+            </button>
+            <p id="copy-message" style="color: white; margin-top: 15px; opacity: 0; transition: opacity 0.3s;"></p>
         </div>
     </section>
 
     <footer>
         <p>© 2025 Othmane Bouadel - Fait avec <i class="fas fa-heart"></i> et passion</p>
     </footer>
+
+    <script>
+        function copyEmail() {
+            const email = 'bbouadel97@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                const message = document.getElementById('copy-message');
+                message.textContent = '✓ Email copié dans le presse-papier !';
+                message.style.opacity = '1';
+                setTimeout(() => {
+                    message.style.opacity = '0';
+                }, 3000);
+            });
+        }
+    </script>
 
 </body>
 </html>

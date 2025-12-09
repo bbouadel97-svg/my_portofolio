@@ -494,6 +494,9 @@ a:hover {
     box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
     position: relative;
     overflow: hidden;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
 }
 
 .btn-contact::before {
