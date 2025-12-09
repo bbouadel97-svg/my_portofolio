@@ -59,6 +59,32 @@ header::before {
     font-size: 3em;
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5);
     animation: float 3s ease-in-out infinite;
+    position: relative;
+}
+
+.profile-circle::before {
+    content: '';
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    animation: rotate 10s linear infinite;
+}
+
+.profile-circle::after {
+    content: '';
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    animation: rotate 15s linear infinite reverse;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 @keyframes float {
